@@ -5,3 +5,34 @@
   justify-content: center;
   height: 100vh;
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.yes-button {
+  background-color: #ff00ae;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  /* margin-right: 10px; */
+}
+
+.no-button {
+  background-color: #0000ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* add borer */
+  border: none;  
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  /* margin-left: 10px; */
+}
