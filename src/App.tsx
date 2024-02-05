@@ -10,11 +10,56 @@ const phrases = [
   "You're breaking my heart ;(",
 ]
 function App() {
-  const [count, setCount] = useState(0);
+  const [noCount, setNoCount] = useState(0);
+  const [yesPressed, setYesPressed] = useState(false);
+  const yesButtonSize = noCount * 20 + 16;
+
+  function handleNoClick() {
+    setNoCount(noCount + 1);
+  }
+
+  function getNoButtonText() {
+    return phrases[Math.min(noCount, phrases.length - 1)];
+  }
 
   return (
-    <>
-    </>
+    <div className="valentine-container">
+      {
+        yesPressed ? (
+          <>
+            <img
+              alt = "" // Add alt text here
+              src = "" // Add image source here
+            />
+            <div className = "text">Yay!!</div>
+          </>
+        ) : (
+          <>
+            <img
+              alt = "" // Add alt text
+              src = "" // Add image source
+            />
+
+            <div>Will you be me valentine?</div>
+            <div>
+              <button
+                className = "yesButton"
+                style = {{ fontSize: yesButtonSize }}
+                onClick = {() => setYesPressed(true)}
+              >
+                Yes
+              </button>
+              <button
+                className = "noButton"
+                onClick = {handleNoClick}
+              >
+                {getNoButtonText()}
+              </button>
+            </div>
+          </>
+        )
+      }
+    </div>
   );
 }
 
