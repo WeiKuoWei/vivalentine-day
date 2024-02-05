@@ -16,7 +16,24 @@ function App() {
   const [playBeforeAudio, setPlayBeforeAudio] = useState(true);
   const [playAfterAudio, setPlayAfterAudio] = useState(false);
 
+  const handleYesClick = () => {
+    setYesPressed(true);
+    setPlayAfterAudio(true);
+  };
 
+  useEffect(() => {
+    if (playBeforeAudio) {
+      const beforeAudio = new Audio("audios/beforeClick.mp3");
+      beforeAudio.play();
+      setPlayBeforeAudio(false);
+    }
+
+    if (playAfterAudio) {
+      const afterAudio = new Audio("audios/afterClick.mp3");
+      afterAudio.play();
+      setPlayAfterAudio(false);
+    }
+  }, [playBeforeAudio, playAfterAudio]);
 
   // for controlling the size of the yes button
   const [noCount, setNoCount] = useState(0);
@@ -63,7 +80,10 @@ function App() {
                 style={{
                   fontSize: yesButtonSize,
                 }}
-                onClick={() => setYesPressed(true)}
+                onClick={() => {
+                  handleYesClick();
+                  setYesPressed(true);
+                }}
               >
                 Yes
               </button>
