@@ -28,16 +28,16 @@ function App() {
         yesPressed ? (
           <>
             <img
-              alt = "" // Add alt text here
-              src = "" // Add image source here
+              alt = "will-you" // Add alt text here
+              src = "images/will-you.gif" // Add image source here
             />
             <div className = "text">Yay!!</div>
           </>
         ) : (
           <>
             <img
-              alt = "" // Add alt text
-              src = "" // Add image source
+              alt = "hug-you" // Add alt text
+              src = "images/hug-you.gif" // Add image source
             />
 
             <div>Will you be me valentine?</div>
