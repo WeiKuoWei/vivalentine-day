@@ -26,6 +26,16 @@
   margin-bottom: 20px;
 }
 
+.additional-text {
+  font-size: 0.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #000000;
+
+  line-height: 1.1;
+  margin-bottom: 0px;
+}
+
 .button-container {
   display: flex;
   justify-content: space-between; /* Adjust as needed */
