@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useEffect } from "react";
+
 import "./App.css";
 const phrases = [
   "No",
@@ -10,6 +12,13 @@ const phrases = [
   "You're breaking my heart ;(",
 ]
 function App() {
+  // for controlling the state of background music
+  const [playBeforeAudio, setPlayBeforeAudio] = useState(true);
+  const [playAfterAudio, setPlayAfterAudio] = useState(false);
+
+
+
+  // for controlling the size of the yes button
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
@@ -28,30 +37,39 @@ function App() {
         yesPressed ? (
           <>
             <img
-              alt = "will-you" // Add alt text here
-              src = "images/will-you.gif" // Add image source here
+              alt = "hug-you" // Add alt text
+              src = "images/hug-you.gif" // Add image source
             />
-            <div className = "text">Yay!!</div>
+            <div className = "confirmation-text"> Yay!! </div>
           </>
         ) : (
           <>
             <img
-              alt = "hug-you" // Add alt text
-              src = "images/hug-you.gif" // Add image source
+              alt = "will-you" // Add alt text here
+              src = "images/will-you.gif" // Add image source here
             />
 
-            <div>Will you be me valentine?</div>
-            <div>
+            <div className = "will-you-text"> Will you be me valentine? </div>
+            <div
+              className="button-container"
+              style={{
+                display: "flex",
+                justifyContent: "space-between", // Adjust the alignment
+                marginTop: "20px",  // Add margin at the top
+              }}
+            >
               <button
-                className = "yesButton"
-                style = {{ fontSize: yesButtonSize }}
-                onClick = {() => setYesPressed(true)}
+                className="yes-button"
+                style={{
+                  fontSize: yesButtonSize,
+                }}
+                onClick={() => setYesPressed(true)}
               >
                 Yes
               </button>
               <button
-                className = "noButton"
-                onClick = {handleNoClick}
+                className="noButton"
+                onClick={handleNoClick}
               >
                 {getNoButtonText()}
               </button>

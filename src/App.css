@@ -6,6 +6,26 @@
   height: 100vh;
 }
 
+.will-you-text {
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #000000;
+
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.confirmation-text {
+  font-size: 3.2em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #000000;
+
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
 .button-container {
   display: flex;
   justify-content: space-between; /* Adjust as needed */
@@ -21,7 +41,7 @@
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s;
-  /* margin-right: 10px; */
+  margin-right: 10px;
 }
 
 .no-button {
@@ -34,5 +54,5 @@
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s;
-  /* margin-left: 10px; */
+  margin-left: 10px;
 }
