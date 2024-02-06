@@ -23,7 +23,7 @@ const noGifs = [
 ]
 
 const selfies = [
-  "public/images/hug-you.gif",
+  "images/hug-you.gif",
   "public/images/selfies/01.jpg",
   "public/images/selfies/02.jpg",
   "public/images/selfies/03.jpg",
@@ -114,7 +114,7 @@ function App() {
               I love you bby <span role="img" aria-label="heart">❤️</span>
             </div>
             <div className="additional-text"> 
-              Also, happy 300 Days my love 
+              Also, happy 300 days my love 
             </div>
           </div>
           <button onClick={handleNextSelfie}>Next Picture</button>
@@ -134,7 +134,8 @@ function App() {
           {noCount > 0 && (
             <img
               alt={`no-gif-${noCount}`}
-              src={currentNoGif}
+              // src={currentNoGif}
+              src = "images/cry02.gif"
               style={{ marginTop: "20px" }}
             />
           )}
