@@ -14,7 +14,7 @@ const phrases = [
 
 const noGifs = [
   // "images/cry01.gif",
-  "images/cry02.gif",
+  "public/images/cry02.gif",
   // "images/cry03.gif",
   // "images/cry04.gif",
   // "images/cry05.gif",
@@ -23,19 +23,19 @@ const noGifs = [
 ]
 
 const selfies = [
-  "images/hug-you.gif",
-  "images/selfies/01.jpg",
-  "images/selfies/02.jpg",
-  "images/selfies/03.jpg",
-  "images/selfies/04.jpg",
-  "images/selfies/05.jpg",
-  "images/selfies/06.jpg",
-  "images/selfies/07.jpg",
-  "images/selfies/08.jpg",
-  "images/selfies/09.jpg",
-  "images/selfies/10.jpg",
-  "images/selfies/11.jpg",
-  "images/selfies/12.jpg",
+  "public/images/hug-you.gif",
+  "public/images/selfies/01.jpg",
+  "public/images/selfies/02.jpg",
+  "public/images/selfies/03.jpg",
+  "public/images/selfies/04.jpg",
+  "public/images/selfies/05.jpg",
+  "public/images/selfies/06.jpg",
+  "public/images/selfies/07.jpg",
+  "public/images/selfies/08.jpg",
+  "public/images/selfies/09.jpg",
+  "public/images/selfies/10.jpg",
+  "public/images/selfies/11.jpg",
+  "public/images/selfies/12.jpg",
 ]
 
 function App() {
@@ -76,12 +76,12 @@ function App() {
     };
 
     if (playBeforeAudio) {
-      playAudio("audios/beforeClick.mp3");
+      playAudio("public/audios/beforeClick.mp3");
       setPlayBeforeAudio(false);
     }
 
     if (playAfterAudio) {
-      playAudio("audios/afterClick.mp3");
+      playAudio("public/audios/afterClick.mp3");
       setPlayAfterAudio(false);
     }
   }, [playBeforeAudio, playAfterAudio]);
@@ -107,6 +107,7 @@ function App() {
           <img
             alt="hug-you"
             src={selfies[selfieIndex]}
+            style = {{ width: "300px" }}
           />
           <div className="confirmation-text"> Yay!! 
             <div className="additional-text"> 
