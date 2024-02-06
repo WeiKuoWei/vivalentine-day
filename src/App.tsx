@@ -117,7 +117,7 @@ function App() {
               Also, happy 300 days my love 
             </div>
           </div>
-          <button onClick={handleNextSelfie}>Next Picture</button>
+          <button onClick={handleNextSelfie}>Click Me!!</button>
         </>
       ) : (
         <>
