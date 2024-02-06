@@ -6,11 +6,10 @@
   height: 50vh;
 
   /* set a mininum and maximum width */
-  /* max-width: 100%; */
-  /* min-width: 100%; */
+  max-width: 100%;
+  min-width: 100%;
 
   box-sizing: border-box;
-  overflow: hidden; /* Ensure contents do not overflow */
 
   background-color: #ffffff; /* Light background */
   padding: 20px; /* Add padding to center content */
