@@ -37,7 +37,7 @@ const selfies = [
   "images/selfies/12.jpg",
 ]
 
-function App() {
+function App() {  
   // for rendering the selfie
   const [selfieIndex, setSelfieIndex] = useState(0);
   
@@ -170,7 +170,7 @@ function App() {
               Yes
             </button>
             <button
-              className="noButton"
+              className="no-button"
               onClick={handleNoClick}
             >
               {getNoButtonText()}
