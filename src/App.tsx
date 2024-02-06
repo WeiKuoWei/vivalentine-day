@@ -76,12 +76,12 @@ function App() {
     };
 
     if (playBeforeAudio) {
-      playAudio("public/audios/beforeClick.mp3");
+      playAudio("audios/beforeClick.mp3");
       setPlayBeforeAudio(false);
     }
 
     if (playAfterAudio) {
-      playAudio("public/audios/afterClick.mp3");
+      playAudio("audios/afterClick.mp3");
       setPlayAfterAudio(false);
     }
   }, [playBeforeAudio, playAfterAudio]);
