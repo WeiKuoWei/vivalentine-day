@@ -24,18 +24,18 @@ const noGifs = [
 
 const selfies = [
   "images/hug-you.gif",
-  "public/images/selfies/01.jpg",
-  "public/images/selfies/02.jpg",
-  "public/images/selfies/03.jpg",
-  "public/images/selfies/04.jpg",
-  "public/images/selfies/05.jpg",
-  "public/images/selfies/06.jpg",
-  "public/images/selfies/07.jpg",
-  "public/images/selfies/08.jpg",
-  "public/images/selfies/09.jpg",
-  "public/images/selfies/10.jpg",
-  "public/images/selfies/11.jpg",
-  "public/images/selfies/12.jpg",
+  "images/selfies/01.jpg",
+  "images/selfies/02.jpg",
+  "images/selfies/03.jpg",
+  "images/selfies/04.jpg",
+  "images/selfies/05.jpg",
+  "images/selfies/06.jpg",
+  "images/selfies/07.jpg",
+  "images/selfies/08.jpg",
+  "images/selfies/09.jpg",
+  "images/selfies/10.jpg",
+  "images/selfies/11.jpg",
+  "images/selfies/12.jpg",
 ]
 
 function App() {
