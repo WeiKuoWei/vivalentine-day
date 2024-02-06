@@ -3,11 +3,10 @@ import { useEffect } from "react";
 
 import "./App.css";
 const phrases = [
-  "No",
   "Are you sure?",
   "Really sure?",
-  "Pookie please",
-  "Don't do this to me",
+  "Pookie please...",
+  "Don't do this to me :(",
   "I'm gonna cry...",
   "You're breaking my heart ;(",
 ]
@@ -92,7 +91,9 @@ function App() {
   }
 
   function getNoButtonText() {
-    return phrases[Math.min(noCount, phrases.length - 1)];
+    // return phrases[Math.min(noCount, phrases.length - 1)];
+    if (noCount === 0) return "No";
+    return phrases[noCount % phrases.length];
   }
 
   function handleNextSelfie() {
