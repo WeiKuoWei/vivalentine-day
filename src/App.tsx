@@ -35,11 +35,43 @@ const selfies = [
   "images/selfies/10.jpg",
   "images/selfies/11.jpg",
   "images/selfies/12.jpg",
+  "images/selfies/13.jpg",
+  "images/selfies/14.jpg",
+  "images/selfies/15.jpg",
+  "images/selfies/16.jpg",
+  "images/selfies/17.jpg",
+  "images/selfies/18.jpg",
+  "images/selfies/19.jpg",
+  
+  "images/selfies/21.jpg",
+  "images/selfies/22.jpg",
+  "images/selfies/23.jpg",
+  "images/selfies/24.jpg",
+  "images/selfies/25.jpg",
+  "images/selfies/26.jpg",
+  "images/selfies/27.jpg",
+  "images/selfies/28.jpg",
+  "images/selfies/29.jpg",
+  "images/selfies/30.jpg",
+  "images/selfies/31.jpg",
+  "images/selfies/32.jpg",
+  "images/selfies/33.jpg",
+
+  "images/selfies/35.jpg",
+  "images/selfies/36.jpg",
+  "images/selfies/37.jpg",
+  "images/selfies/38.jpg",
+  "images/selfies/39.jpg",
+  "images/selfies/40.jpg",
 ]
 
 function App() {  
   // for rendering the selfie
   const [selfieIndex, setSelfieIndex] = useState(0);
+
+  // // Array containing selfie image filenames
+  // const selfieFilenames = Array.from({ length: 40 }, (_, i) => `images/selfies/${i + 1}.jpg`);
+
   
   // for controlling the state of background music
   const [playBeforeAudio, setPlayBeforeAudio] = useState(true);
@@ -99,6 +131,7 @@ function App() {
   function handleNextSelfie() {
     // Increment the selfie index
     setSelfieIndex((prevIndex) => (prevIndex + 1) % selfies.length);
+    // setSelfieIndex((prevIndex) => (prevIndex + 1) % selfieFilenames.length);
   }
 
   return (
@@ -107,6 +140,7 @@ function App() {
         <>
           <img
             alt="hug-you"
+            // src={selfies[selfieIndex]}
             src={selfies[selfieIndex]}
             style = {{ 
               width: "300px", 
@@ -122,7 +156,11 @@ function App() {
               Also, happy 300 days my love 
             </div>
           </div>
-          <button onClick={handleNextSelfie}>Click Me!!</button>
+          <button 
+            onClick={handleNextSelfie}
+            style={{marginTop: "30px"}}
+          >
+          Click Me!!</button>
         </>
       ) : (
         <>
