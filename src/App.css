@@ -73,3 +73,34 @@
   transition: background-color 0.3s;
   margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+  /* Media query styles for smaller screens */
+  .valentine-container {
+    height: auto;
+    padding: 10px;
+  }
+
+  .will-you-text {
+    font-size: 1.2em;
+  }
+
+  .confirmation-text {
+    font-size: 2em;
+  }
+
+  .additional-text {
+    font-size: 0.4em;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .yes-button,
+  .no-button {
+    margin: 5px 0;
+  }
+}
