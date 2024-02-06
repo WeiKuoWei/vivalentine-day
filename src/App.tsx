@@ -42,7 +42,7 @@ const selfies = [
   "images/selfies/17.jpg",
   "images/selfies/18.jpg",
   "images/selfies/19.jpg",
-  
+
   "images/selfies/21.jpg",
   "images/selfies/22.jpg",
   "images/selfies/23.jpg",
@@ -153,7 +153,7 @@ function App() {
               I love you bby <span role="img" aria-label="heart">❤️</span>
             </div>
             <div className="additional-text"> 
-              Also, happy 300 days my love 
+              Also, happy 300 days my love :)
             </div>
           </div>
           <button 
