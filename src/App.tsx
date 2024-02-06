@@ -107,7 +107,11 @@ function App() {
           <img
             alt="hug-you"
             src={selfies[selfieIndex]}
-            style = {{ width: "300px" }}
+            style = {{ 
+              width: "300px", 
+              borderRadius: "10px",
+              marginBottom: "20px"
+            }}
           />
           <div className="confirmation-text"> Yay!! 
             <div className="additional-text"> 
@@ -126,7 +130,10 @@ function App() {
             <img
               alt="will-you"
               src="images/will-you.gif"
-              style={{ marginTop: "20px" }}
+              style={{ 
+                width: "300px",
+                marginBottom: "20px",
+              }}
             />
           )}
 
