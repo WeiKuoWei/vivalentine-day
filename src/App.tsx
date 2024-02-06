@@ -12,15 +12,15 @@ const phrases = [
   "You're breaking my heart ;(",
 ]
 
-const noGifs = [
-  // "images/cry01.gif",
-  "public/images/cry02.gif",
-  // "images/cry03.gif",
-  // "images/cry04.gif",
-  // "images/cry05.gif",
-  // "images/cry06.gif",
-  // "images/cry07.gif",
-]
+// const noGifs = [
+//   // "images/cry01.gif",
+//   "public/images/cry02.gif",
+//   // "images/cry03.gif",
+//   // "images/cry04.gif",
+//   // "images/cry05.gif",
+//   // "images/cry06.gif",
+//   // "images/cry07.gif",
+// ]
 
 const selfies = [
   "images/hug-you.gif",
@@ -47,7 +47,7 @@ function App() {
   const [playAfterAudio, setPlayAfterAudio] = useState(false);
 
   // for controlling the no gif
-  const [currentNoGif, setCurrentNoGif] = useState(noGifs[0]);
+  // const [currentNoGif, setCurrentNoGif] = useState(noGifs[0]);
 
   // for controlling the size of the yes button
   const [noCount, setNoCount] = useState(0);
@@ -88,7 +88,7 @@ function App() {
 
   function handleNoClick() {
     setNoCount(noCount + 1);
-    setCurrentNoGif(noGifs[noCount % noGifs.length]);
+    // setCurrentNoGif(noGifs[noCount % noGifs.length]);
   }
 
   function getNoButtonText() {
