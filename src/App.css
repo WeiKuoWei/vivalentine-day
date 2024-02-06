@@ -4,14 +4,21 @@
   align-items: center;
   justify-content: center;
   height: 50vh;
-  /* set a mininum width */
+
+  /* set a mininum and maximum width */
+  max-width: 100%;
   min-width: 100%;
+
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure contents do not overflow */
 
   background-color: #ffffff; /* Light background */
   padding: 20px; /* Add padding to center content */
   border-radius: 20px; /* Optional: add rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
 }
+
+
 
 .will-you-text {
   font-size: 1.5em;
@@ -74,33 +81,10 @@
   margin-left: 10px;
 }
 
+/* Additional styles for smaller screens */
 @media (max-width: 768px) {
-  /* Media query styles for smaller screens */
   .valentine-container {
-    height: auto;
-    padding: 10px;
-  }
-
-  .will-you-text {
-    font-size: 1.2em;
-  }
-
-  .confirmation-text {
-    font-size: 2em;
-  }
-
-  .additional-text {
-    font-size: 0.4em;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .yes-button,
-  .no-button {
-    margin: 5px 0;
+    height: auto; /* Set height to auto for smaller screens */
+    width: auto;
   }
 }
