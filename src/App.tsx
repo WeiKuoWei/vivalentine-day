@@ -51,7 +51,7 @@ function App() {
   // for controlling the size of the yes button
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
-  const yesButtonSize = noCount * 20 + 16;
+  const yesButtonSize = noCount * 20 + 20;
 
   // for controlling the state of the yes button
   const handleYesClick = () => {
