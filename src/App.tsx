@@ -59,10 +59,10 @@ function App() {
     setYesPressed(true);
     setPlayAfterAudio(true);
 
-    // Open a new tab after 10 seconds
-    setTimeout(() => {
-      window.open("https://google.com", "_blank"); // Replace with the URL you want to open
-    }, 10000);
+    // // Open a new tab after 10 seconds
+    // setTimeout(() => {
+    //   window.open("https://google.com", "_blank"); // Replace with the URL you want to open
+    // }, 10000);
   };
 
   useEffect(() => {
