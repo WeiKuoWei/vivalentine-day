@@ -6,8 +6,8 @@
   height: 50vh;
 
   /* set a mininum and maximum width */
-  max-width: 100%;
-  min-width: 100%;
+  /* max-width: 100%; */
+  /* min-width: 100%; */
 
   box-sizing: border-box;
   overflow: hidden; /* Ensure contents do not overflow */
@@ -86,5 +86,11 @@
   .valentine-container {
     height: auto; /* Set height to auto for smaller screens */
     width: auto;
+  }
+  .will-you-text {
+    font-size: 1.2em;
+  }
+  .confirmation-text {
+    font-size: 2em;
   }
 }
