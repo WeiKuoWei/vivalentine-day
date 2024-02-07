@@ -19,7 +19,7 @@ function App() {
   // for controlling the state of background music
   const [playBeforeAudio, setPlayBeforeAudio] = useState(true);
   const [playAfterAudio, setPlayAfterAudio] = useState(false);
-
+  
   // for controlling the no gif
   // const [currentNoGif, setCurrentNoGif] = useState(noGifs[0]);
 
@@ -32,6 +32,7 @@ function App() {
   const handleYesClick = () => {
     setYesPressed(true);
     setPlayAfterAudio(true);
+    setPlayBeforeAudio(false);
 
     // // Open a new tab after 10 seconds
     // setTimeout(() => {
@@ -40,22 +41,31 @@ function App() {
   };
 
   useEffect(() => {
-    const playAudio = async (audioPath:string) => {
-      try {
-        const audio = new Audio(audioPath);
-        await audio.play();
-      } catch (error) {
-        console.error("Error playing audio:", error);
-      }
-    };
+    const audioBefore = new Audio("audios/beforeClick.mp3");
+    const audioAfter = new Audio("audios/afterClick.mp3");
+  
+    // audioBefore.preload = "auto";
+    // audioAfter.preload = "auto";
 
-    if (playBeforeAudio) {
-      playAudio("audios/beforeClick.mp3");
-      setPlayBeforeAudio(false);
-    }
+    // // HERE TO BE FIXED; right now cannot stop the audio once it starts playing
+    // if (playBeforeAudio) {
+    //   // play before audio
+    //   audioBefore.play();
+    //   // playAudio("audios/beforeClick.mp3");
+    //   setPlayBeforeAudio(false);
+    // }
 
     if (playAfterAudio) {
-      playAudio("audios/afterClick.mp3");
+      // pause before audio if it's playing
+      audioBefore.pause();
+      audioBefore.onpause = () => {
+        // After the audio has been paused, reset its currentTime to 0
+        audioBefore.currentTime = 0;
+      }
+
+      // play after audio
+      audioAfter.play();
+      // playAudio("audios/afterClick.mp3");
       setPlayAfterAudio(false);
     }
   }, [playBeforeAudio, playAfterAudio]);
@@ -100,7 +110,7 @@ function App() {
           </div>
           <button 
             onClick={handleNextSelfie}
-            style={{marginTop: "30px"}}
+            style={{marginTop: "30px", color: "white"}}
           >
           Click Me!!</button>
         </>
@@ -138,13 +148,8 @@ function App() {
           >
             <button
               className="yes-button"
-              style={{
-                fontSize: yesButtonSize,
-              }}
-              onClick={() => {
-                handleYesClick();
-                setYesPressed(true);
-              }}
+              style={{ fontSize: yesButtonSize }}
+              onClick={() => { handleYesClick(); }}
             >
               Yes
             </button>
