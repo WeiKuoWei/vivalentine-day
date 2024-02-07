@@ -15,10 +15,6 @@ const phrases = [
 function App() {  
   // for rendering the selfie
   const [selfieIndex, setSelfieIndex] = useState(0);
-
-  // // Array containing selfie image filenames
-  // const selfieFilenames = Array.from({ length: 40 }, (_, i) => `images/selfies/${i + 1}.jpg`);
-
   
   // for controlling the state of background music
   const [playBeforeAudio, setPlayBeforeAudio] = useState(true);
@@ -78,7 +74,6 @@ function App() {
   function handleNextSelfie() {
     // Increment the selfie index
     setSelfieIndex((prevIndex) => (prevIndex + 1) % selfies.length);
-    // setSelfieIndex((prevIndex) => (prevIndex + 1) % selfieFilenames.length);
   }
 
   return (
