@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { selfies } from "./imagesData.ts";
 
 import "./App.css";
 const phrases = [
@@ -9,60 +10,6 @@ const phrases = [
   "Don't do this to me :(",
   "I'm gonna cry...",
   "You're breaking my heart ;(",
-]
-
-// const noGifs = [
-//   // "images/cry01.gif",
-//   "public/images/cry02.gif",
-//   // "images/cry03.gif",
-//   // "images/cry04.gif",
-//   // "images/cry05.gif",
-//   // "images/cry06.gif",
-//   // "images/cry07.gif",
-// ]
-
-const selfies = [
-  "images/hug-you.gif",
-  "images/selfies/01.jpg",
-  "images/selfies/02.jpg",
-  "images/selfies/03.jpg",
-  "images/selfies/04.jpg",
-  "images/selfies/05.jpg",
-  "images/selfies/06.jpg",
-  "images/selfies/07.jpg",
-  "images/selfies/08.jpg",
-  "images/selfies/09.jpg",
-  "images/selfies/10.jpg",
-  "images/selfies/11.jpg",
-  "images/selfies/12.jpg",
-  "images/selfies/13.jpg",
-  "images/selfies/14.jpg",
-  "images/selfies/15.jpg",
-  "images/selfies/16.jpg",
-  "images/selfies/17.jpg",
-  "images/selfies/18.jpg",
-  "images/selfies/19.jpg",
-
-  "images/selfies/21.jpg",
-  "images/selfies/22.jpg",
-  "images/selfies/23.jpg",
-  "images/selfies/24.jpg",
-  "images/selfies/25.jpg",
-  "images/selfies/26.jpg",
-  "images/selfies/27.jpg",
-  "images/selfies/28.jpg",
-  "images/selfies/29.jpg",
-  "images/selfies/30.jpg",
-  "images/selfies/31.jpg",
-  "images/selfies/32.jpg",
-  "images/selfies/33.jpg",
-
-  "images/selfies/35.jpg",
-  "images/selfies/36.jpg",
-  "images/selfies/37.jpg",
-  "images/selfies/38.jpg",
-  "images/selfies/39.jpg",
-  "images/selfies/40.jpg",
 ]
 
 function App() {  
@@ -92,7 +39,7 @@ function App() {
 
     // // Open a new tab after 10 seconds
     // setTimeout(() => {
-    //   window.open("https://google.com", "_blank"); // Replace with the URL you want to open
+    //   window.open("https://google.com", "_blank"); 
     // }, 10000);
   };
 
@@ -180,7 +127,6 @@ function App() {
           {noCount > 0 && (
             <img
               alt={`no-gif-${noCount}`}
-              // src={currentNoGif}
               src = "images/cry02.gif"
               style={{ marginTop: "20px" }}
             />
