@@ -90,16 +90,18 @@ function App() {
     <div className="valentine-container">
       {yesPressed ? (
         <>
-          <img
-            alt="hug-you"
-            // src={selfies[selfieIndex]}
-            src={selfies[selfieIndex]}
-            style = {{ 
-              width: "300px", 
-              borderRadius: "10px",
-              marginBottom: "20px"
-            }}
-          />
+          <a href="https://www.moonpig.com/us/ecard/?key=c2hhcmUvZXUtd2VzdC0xLzEybS9iZGM4OGMxZjMwMjhkNjU3OWMyODlmZmNkMDAyNGRlNjRjMTMwYjM3MGE2YWI0MGZiNmNiYWU4MDY1NzBjMTJk&noapp=true&utm_source=Sailthru&utm_medium=email&utm_campaign=mpgECardDelivery_US_EN">
+            <img
+              alt="hug-you"
+              // src={selfies[selfieIndex]}
+              src={selfies[selfieIndex]}
+              style = {{ 
+                width: "300px", 
+                borderRadius: "10px",
+                marginBottom: "20px"
+              }}
+            />
+          </a>
           <div className="confirmation-text"> Yay!! 
             <div className="additional-text"> 
               I love you bby <span role="img" aria-label="heart">❤️</span>
